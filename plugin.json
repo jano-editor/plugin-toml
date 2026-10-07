@@ -1,0 +1,11 @@
+{
+  "name": "toml",
+  "version": "1.0.0",
+  "api": 1,
+  "description": "TOML syntax highlighting",
+  "extensions": [".toml"],
+  "entry": "index.js",
+  "author": "jano-editor",
+  "homepage": "https://janoeditor.dev",
+  "license": "MIT"
+}
