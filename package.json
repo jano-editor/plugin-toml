@@ -1,0 +1,22 @@
+{
+  "name": "jano-plugin-toml",
+  "version": "1.0.0",
+  "description": "TOML syntax highlighting plugin for jano editor",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=esm --platform=node --outfile=dist/index.js",
+    "install-plugin": "pnpm build && node -e \"const fs=require('fs'),p=require('path'),d=p.join(require('os').homedir(),'.local','share','jano','plugins','toml');fs.mkdirSync(d,{recursive:true});fs.cpSync('dist/index.js',p.join(d,'index.js'));fs.cpSync('plugin.json',p.join(d,'plugin.json'));console.log('Installed to',d)\""
+  },
+  "devDependencies": {
+    "@jano-editor/plugin-types": "^1.0.0-alpha.1",
+    "esbuild": "^0.24.0"
+  },
+  "license": "MIT",
+  "author": "jano-editor",
+  "homepage": "https://github.com/jano-editor/plugin-toml",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jano-editor/plugin-toml.git"
+  }
+}
